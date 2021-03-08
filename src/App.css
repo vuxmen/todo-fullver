@@ -1,7 +1,11 @@
 
- .App p {
+.App {
+  background-color: #ff6f61;
+}
+
+.App p {
    text-align: center;
- }
+}
 
 
 
