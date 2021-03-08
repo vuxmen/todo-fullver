@@ -1,0 +1,43 @@
+/* stardard on Iphone X */
+
+
+
+
+
+
+
+
+
+/* Portrait */
+/* smart phone  */
+@media screen and (max-width: 414px) {
+
+}
+
+/* tablet */
+@media screen and (max-width: 1023px) {
+
+}
+
+/* desktop and tv */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* Landscape */
+/* smartphone and small tablet */
+@media screen and (max-width: 812px) and (orientation: landscape) {
+
+
+}
+
+/* tablet and desktop */
+@media screen and (max-width: 1919px) and (orientation: landscape) {
+
+
+}
+/* desktop and tv */
+@media screen and (min-width: 1920px) and (orientation: landscape) {
+
+
+}
