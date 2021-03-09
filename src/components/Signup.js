@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Signup.module.css';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { useHistory } from 'react-router-dom';
+import { ValidateSignUp } from '../Validation';
 
 export default function Signup () {
     const history = useHistory();

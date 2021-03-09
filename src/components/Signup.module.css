@@ -106,12 +106,13 @@
 
 /* Landscape */
 /* smartphone and small tablet */
+
+
+
 @media screen and (max-width: 812px) and (orientation: landscape) {
     .signUp {
         height: 100vw;
     }
-
-    
 
 }
 

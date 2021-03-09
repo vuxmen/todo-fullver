@@ -2,44 +2,53 @@ import React from 'react';
 import style from './Login.module.css';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
-import { useFormik } from 'formik';
-import Validation from '../Validation';
+import { Formik, Form, FastField } from 'formik';
+import { ValidateLogin } from '../Validation';
+import { Button } from 'reactstrap';
+import  InputField  from '../customField/InputField';
 
 export default function Login () {
-    const history = useHistory();
-    const formik = useFormik({
-        initialValues: {
-            username: '',
-            password: ''
-        },
-        validationSchema: Validation,
-        onSubmit: () => {
-            
-        }
-    });
-    
+    const initialValues = {
+        username: '',
+        password: ''
+    };
 
     return (
-        <div className = {style.login} >
-            <div className = {style.login_container}>
+        <div className={style.login} >
+            <div className={style.login_container}>
                 <h2>Welcome Todo App</h2>
-                <form className = {style.form} onSubmit = {formik.handleSubmit} >
-                    <input name = "username" type="text" placeholder= "   Type ur username..."
-                    value = {formik.values.username}
-                    onChange = {formik.handleChange}
-                     />
-                    <input name = "password" type="text" placeholder= "   Type ur password..."
-                    value = {formik.values.password} 
-                    onChange = {formik.handleChange}
-                     />
-                    <button type = "submit">Login</button>
-                    <Link to ="/Signup" className = {style.linkSignup}>Don't have an account ? Sign up here</Link>
-                    {
-                        Object.values(formik.errors).map(error => (
-                            <div>{error}</div>
-                        ))
-                    }
-                </form>
+                <Formik 
+                    initialValues={initialValues}
+                    validationSchema={ValidateLogin}
+                    onSubmit={values => console.log(values)}
+                >
+                    {formikProps => {
+                        //do something
+                        const {values, errors, touched} = formikProps;
+                        console.log({values, errors, touched});
+                        return (
+                            <Form className={style.form} >
+                                <FastField 
+                                    name="username"
+                                    component={InputField}
+
+                                    placeholder="Type ur username..."        
+                                />
+
+                                <FastField
+                                    name="password"
+                                    component={InputField}
+
+                                    placeholder="Type ur password..."
+                                />
+                
+                                <Button type="submit">Login</Button>
+                                <Link to="/Signup" className={style.linkSignup}>Don't have an account ? Sign up here</Link>
+                            </Form>
+                        );
+                    }}
+                </Formik>
+                
                 
             </div>
         </div>
