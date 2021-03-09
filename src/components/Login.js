@@ -1,11 +1,13 @@
 import React from 'react';
 import style from './Login.module.css';
 import { Link } from 'react-router-dom';
-import Signup from './Signup';
+import { useHistory } from 'react-router-dom';
 
 export default function Login () {
+    const history = useHistory();
     const handleSubmit = () => {
-
+        //Check some Condition before move to TotoTask
+        history.push('/TodoTask');
     }
 
     return (

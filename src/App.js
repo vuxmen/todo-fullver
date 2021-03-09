@@ -12,7 +12,7 @@ export default function App() {
         <Switch>
           <Route path = "/" exact component = {Login}/>
           <Route path = "/Signup" component = {Signup}/>
-          {/* <Route path = "/TodoTask" component = {TodoTask}/> */}
+          <Route path = "/TodoTask" component = {TodoTask}/>
         </Switch>
       </Router>
     </div>

@@ -1,0 +1,14 @@
+.tasklist {
+    color: white;
+}
+
+.tasklist .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+
+.expandIcon {
+    cursor: pointer;
+}

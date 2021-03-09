@@ -1,0 +1,35 @@
+.todotask {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #db4a3d;
+}
+
+.header h2 {
+    padding-left: 2vw;
+}
+
+
+
+.signOutIcon {
+    color: white;
+}
+
+.logoutArea {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 2vw;
+    cursor: pointer;
+}
+
+.body {
+    padding: 1vw 2vw 2vw 2vw;
+}

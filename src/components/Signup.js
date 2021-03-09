@@ -14,7 +14,7 @@ export default function Signup () {
                 <span>Back to Login</span>
             </div>
             <div className = {style.container}>
-                <div class = {style.title}>
+                <div className = {style.title}>
                     <h2>Fill your Information</h2>
                 </div>
                 
